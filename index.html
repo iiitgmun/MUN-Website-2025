@@ -1,113 +1,690 @@
 <!DOCTYPE html>
-<html data-bs-theme="light" lang="en">
-
+<!-- <html data-bs-theme="light" lang="en"> -->
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Services - IIITG MUN</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/styles.min.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Home - IIITG MUN</title>
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/styles.min.css">
+  <style>
+    .upperbox{
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  height: 0vh;
+  background-color: #f5f5f5;
+    position: fixed;
+     width: 100%; /* Optional: Ensures the element spans the full width */
+     z-index: 1000; 
+     justify-content: center; /* Align items horizontally at center */
+     align-items: center; 
+
+}
+
+.notice-container {
+   width: 100%;
+  max-width: 100vm;
+  height: 100px;
+  overflow: hidden;
+  border: 2px solid #333;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  align-items: center;
+ justify-content: center;
+ box-sizing: border-box;
+}
+
+.notice-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  animation: scroll 15s linear infinite;
+}
+
+.notice-list li {
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  background: linear-gradient(to right,  #23395D, #440445);
+  color: #fff;
+}
+
+.register-button {
+  display: inline-block;
+  margin-left: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #ff5733;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.register-button:hover {
+  background-color: #c70039;
+}
+
+@keyframes scroll {
+  0% {
+      transform: translateY(0);
+  }
+  100% {
+      transform: translateY(-50%);
+  }
+}
+ @media (max-width:768vm) {
+   .upperbox{
+    width:100%;
+
+  } 
+    .notice-container {
+      height: 20vm;
+   
+      padding-right: 10px;
+    }
+
+    .notice-list li {
+      font-size: 14px;
+      padding: 10px;
+      display: flex;
+      flex-wrap: wrap; /* ✅ Button new line pe chala jaye */
+      justify-content: flex-start; /* ✅ Button shift ho jaye */
+      align-items:stretch;
+    }
+
+    .register-button {
+      font-size: 12px;
+      padding: 8px 15px;
+      margin-left: 10px;
+    }
+  }
+  </style>
 </head>
 
 <body><!-- Start: Navbar Centered Links -->
-    <nav class="navbar navbar-expand-md sticky-top py-3 navbar-dark" id="mainNav">
-        <div class="container"><a href="index.html"><img class="img-fluid"
-                    src="assets/img/MUN_LOGO__6_-removebg-preview.png" width="71" height="73"></a><a
-                class="navbar-brand d-flex align-items-center" href="/"><span>IIITG MUN</span></a><button
-                class="navbar-toggler" data-bs-toggle="collapse"><span class="visually-hidden">Toggle
-                    navigation</span><span class="navbar-toggler-icon"></span></button></div>
-    </nav><!-- End: Navbar Centered Links -->
-    <div class="row mb-4 mb-lg-5">
-        <div class="col-md-8 col-xl-6 text-center mx-auto" style="background: #27262e;">
-            <p class="fw-bold text-success mb-2" data-aos="fade" data-aos-duration="1000" data-aos-delay="250">online
-                Committee</p>
-            <h3 class="fw-bold" data-aos="fade-right"><strong>Join Crisis Committee</strong></h3>
-        </div>
+  <div class="bodyfull">
+  <nav class="navbar navbar-expand-md sticky-top py-3 navbar-dark" id="mainNav">
+    <!-- <div class="alert mb-0 text-center fixed-top" role="alert" 
+    style="background-color: #da5353; color: #ffffff; font-size: 1rem; padding: 15px; margin-top: 5.5rem;">
+ <div class="container">
+   <strong><img src="assets/img/Notification/newicon.gif">&nbsp;&nbsp;&nbsp;&nbspReady to Lead? Executive Board Applications are NOW OPEN!</strong>
+      <a href="registration-page-url" class="btn btn-primary btn-sm mt-2 mt-lg-0" style="margin-left: 10px;">Register Now</a>
+ </div> -->
+ 
+
+
+
+    <div class="container"><img class="img-fluid" src="assets/img/MUN_LOGO__6_-removebg-preview.png" width="71"
+        height="73"><a class="navbar-brand d-flex align-items-center" href="/"><span>IIITG MUN</span></a><button
+        class="navbar-toggler" data-bs-toggle="collapse"><span class="visually-hidden">Toggle navigation</span><span
+          class="navbar-toggler-icon"></span></button></div>
+  </nav><!-- End: Navbar Centered Links -->
+  <div class="bg-dark2" >
+    <div class="notice-container">
+        <ul class="notice-list">
+            <li>
+                Notice 1: &nbsp; Become our Campus Ambassador !
+               
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSccpMEioCKOkYO_u5KElBwrfiQVWvPmmIovQg6perDKXIVGSA/viewform?usp=header" class="register-button">Register Now</a>
+            </li>
+            <li>
+                Notice 2: &nbsp; Delegate Registration Form (Offline Committee) !
+                <a href="https://forms.gle/Dz9XL7ELPGpsSJ7V6" class="register-button">Register Now</a>
+            </li>
+            <li>
+                Notice 3: &nbsp;Delegate Registration Form (Online Committee) !
+                <a href="https://forms.gle/kHzHwbGre9W8yrF68" class="register-button">Register Now</a>
+            </li>
+            <!-- <li>
+                Notice 4: &nbsp;Submit Your Assignments!
+                <a href="registration_link_4" class="register-button">Register Now</a>
+            </li> -->
+            <li>
+              Notice 1: &nbsp; Become our Campus Ambassador !
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSccpMEioCKOkYO_u5KElBwrfiQVWvPmmIovQg6perDKXIVGSA/viewform?usp=header" class="register-button">Register Now</a>
+          </li>
+          <li>
+              Notice 2: &nbsp; Delegate Registration Form (Offline Committee) !
+              <a href="https://forms.gle/Dz9XL7ELPGpsSJ7V6" class="register-button">Register Now</a>
+          </li>
+          <li>
+              Notice 3: Delegate Registration Form (Online Committee) !
+              <a href="https://forms.gle/kHzHwbGre9W8yrF68" class="register-button">Register Now</a>
+          </li>
+          <!-- <li>
+              Notice 4: Submit Your Assignments!
+              <a href="registration_link_4" class="register-button">Register Now</a>
+          </li> -->
+            <!-- Duplicate the list items for seamless scrolling -->
+            <!-- <li>
+                Notice 1: Event Registration Open!
+                <a href="registration_link_1" class="register-button">Register Now</a>
+            </li>
+            <li>
+                Notice 2: Workshop on AI this Friday!
+                <a href="registration_link_2" class="register-button">Register Now</a>
+            </li>
+            <li>
+                Notice 3: Coding Contest Next Week!
+                <a href="registration_link_3" class="register-button">Register Now</a>
+            </li>
+            <li>
+                Notice 4: Submit Your Assignments!
+                <a href="registration_link_4" class="register-button">Register Now</a>
+            </li> -->
+        </ul>
     </div>
-    <section><!-- Start: H1 -->
-        <h1 data-aos="fade-down" data-aos-duration="1000" data-aos-delay="250"
-            style="color: var(--bs-body-color);text-align: center;">Agenda</h1><!-- End: H1 -->
-        <p class="text-muted mb-4" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="250"
-            style="text-align: center;margin: 0;margin-top: 5%;padding: 3%;font-size:x-large"> Deliberation on the developments pertaining to the situation in Bangladesh. 
-           <br> Freeze Date - 5th August, 2024.!</p>
-    </section>
-    <section><!-- Start: Team with rotating cards -->
-        <section class="card-section-imagia" style="color: var(--bs-emphasis-color);background: var(--bs-body-bg);">
-            <!-- Start: H1 -->
-            <h1 data-aos="fade-down" data-aos-duration="1000" data-aos-delay="250" style="color: var(--bs-body-color);">
-                Our Executive Boards</h1><!-- End: H1 -->
-            <div class="container">
-                <div class="row d-md-flex justify-content-md-center align-items-md-center">
-                    <div class="col-sm-6 col-md-5" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="250">
-                        <!-- Start: card container -->
-                        <div class="card-container-imagia"><!-- Start: card -->
-                            <div class="card-imagia"><!-- Start: front -->
-                                <div class="front-imagia"><!-- Start: cover gradient -->
-                                    <div class="cover-imagia cover-gradient" style="background: #27262e;"></div>
-                                    <!-- End: cover gradient --><!-- Start: user image -->
-                                    <!-- <div class="user-imagia"><img class="rounded-circle img-fluid img-circle" alt=""
-                                            src="assets/img/WhatsApp%20Image%202024-02-25%20at%202.16.39%20PM.jpeg">
-                                    </div>End: user image -->
-                                    <div class="content-imagia">
-                                        <h3 class="name-imagia">To be Revealed Soon!</h3>
-                                        <p class="subtitle-imagia">Speaker</p>
-                                    </div>
-                                </div><!-- End: front -->
-                            </div><!-- End: card -->
-                        </div><!-- End: card container -->
-                    </div>
-                    <div class="col-sm-6 col-md-5" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="250">
-                        <!-- Start: card container -->
-                        <div class="card-container-imagia"><!-- Start: card -->
-                            <div class="card-imagia"><!-- Start: front -->
-                                <div class="front-imagia"><!-- Start: cover gradient -->
-                                    <div class="cover-imagia cover-gradient" style="background: #27262e;"></div>
-                                    <!-- End: cover gradient --><!-- Start: user image -->
-                                    <!-- <div class="user-imagia"><img class="rounded-circle img-circle" alt=""
-                                            src="assets/img/DSC_0172.jpg" width="120" height="116"></div>
-                                    End: user image -->
-                                    <div class="content-imagia">
-                                        <h3 class="name-imagia">To be Revealed Soon!</h3>
-                                        <p class="subtitle-imagia">Deputy Speaker</p>
-                                    </div>
-                                </div><!-- End: front -->
-                            </div><!-- End: card -->
-                        </div><!-- End: card container -->
-                    </div>
-                </div>
+</div>
+  <header class="bg-dark"><!-- Start: Hero Clean Reverse -->
+    <div class="container py-5">
+      <div class="row py-5">
+        <div
+          class="col-md-6 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-end mb-4"
+          style="text-align: center ;">
+          <div style="max-width: 450px;">
+            <p class="fw-bold text-success mb-2" data-aos="slide-right" data-aos-duration="1300"
+              style="text-align: center;--bs-success: #0085a1;--bs-success-rgb: 0,133,161;font-size: 30px;">Indian
+              Institute of Information Technology, Guwahati</p>
+            <h2 class="fw-bold" data-aos="slide-left" data-aos-duration="800"
+              style="text-align: center;margin: 19px;height: 36.1484px;margin-right: 0px;margin-left: 0px;">IIITG Model
+              United Nations</h2>
+            <h5 data-aos="slide-right" style="text-align: center;height: 31px;margin: 30px;">March 1 &amp; 2, 2025</h5>
+            <form
+              class="text-center d-flex justify-content-center flex-wrap justify-content-md-center align-items-md-center flex-lg-nowrap justify-content-xl-center align-items-xl-center"
+              method="post">
+              <div class="my-2 me-2"></div>
+              <div class="my-2"></div><a class="btn btn-primary shadow" role="button" data-aos="slide-right"
+                data-aos-duration="750"
+                style="text-align: center;margin: 27px;">Delegate Registrations Open Now !</a>
+            </form>
+
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="p-5 mx-lg-5"
+            style="background: url(&quot;assets/img/blob.svg&quot;) center / contain no-repeat, rgba(125,60,191,0);">
+            <img class="rounded img-fluid shadow w-100 fit-cover" data-aos="slide-left" data-aos-duration="1000"
+              style="min-height: 300px;background: url(&quot;assets/img/Designer.jpeg&quot;) center / cover;"
+              src="assets/img/Designer.jpeg"></div>
+        </div>
+      </div>
+    </div><!-- End: Hero Clean Reverse -->
+  </header>
+  <section><!-- Start: Features Cards -->
+    <div class="container bg-dark py-5" style="--bs-body-bg: #2d2c38;">
+      <div class="row">
+        <div class="col-sm-12 col-md-8 col-xl-6 text-center mx-auto" data-aos="fade-left" data-aos-duration="800">
+          <p class="fw-bold text-success mb-2">About Us</p>
+          <h3 class="fw-bold">This Is Who We Are</h3>
+        </div>
+      </div>
+      <div class="py-5 p-lg-5">
+        <div class="row row-cols-1 row-cols-md-2 mx-auto" style="max-width: 900px;">
+          <div class="col mb-5" data-aos="slide-right" data-aos-duration="700">
+            <div class="card shadow-sm">
+              <div class="card-body px-4 py-5 px-md-5">
+                <div class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon"
+                  style="top: 1rem;right: 1rem;position: absolute;"><svg xmlns="http://www.w3.org/2000/svg" width="1em"
+                    height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-calendar-event text-success">
+                    <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"></path>
+                    <path
+                      d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z">
+                    </path>
+                  </svg></div>
+                <h5 class="fw-bold card-title">IIITG MUN</h5>
+                <p class="text-muted card-text mb-4">Model United Nations (MUN) is an educational simulation activity
+                  that involves students role-playing as delegates to the United Nations and other international
+                  organizations. Participants in MUN conferences represent different countries and are assigned to
+                  specific committees where they discuss and debate issues of global concern, using diplomatic skills to
+                  negotiate</p>
+              </div>
             </div>
-        </section><!-- End: Team with rotating cards -->
-    </section>
-    <section><!-- Start: H1 -->
-        <h1 data-aos="fade-down" data-aos-duration="1000" data-aos-delay="250"
-            style="color: var(--bs-body-color);text-align: center;">Reading Materials</h1><!-- End: H1 -->
-        <p class="text-muted mb-4" data-aos="fade" data-aos-duration="1000" data-aos-delay="250"
-            style="text-align: center;">Here are the reading materials to keep you updated for the committee !!!</p>
-        <div class="row">
-            <div class="col d-flex flex-column justify-content-center align-items-center"><a
-                    class="btn btn-primary shadow" role="button" data-aos="fade-left" data-aos-duration="1000"
-                    data-aos-delay="250" style="margin-right: 2%;margin-left: 2%;margin-bottom: 3%;"
-                    href=>Background
-                    Guide</a><a class="btn btn-primary shadow" role="button" data-aos="fade-left"
-                    data-aos-duration="1000" data-aos-delay="250"
-                    style="margin-right: 2%;margin-left: 2%;margin-bottom: 3%;"
-                    href=>Code Of
-                    Conduct</a></div>
+          </div>
+          <div class="col mb-5" data-aos="slide-left" data-aos-duration="750">
+            <div class="card shadow-sm">
+              <div class="card-body px-4 py-5 px-md-5">
+                <div class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon"
+                  style="top: 1rem;right: 1rem;position: absolute;"><svg xmlns="http://www.w3.org/2000/svg" width="1em"
+                    height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-bezier text-success">
+                    <path fill-rule="evenodd"
+                      d="M0 10.5A1.5 1.5 0 0 1 1.5 9h1A1.5 1.5 0 0 1 4 10.5v1A1.5 1.5 0 0 1 2.5 13h-1A1.5 1.5 0 0 1 0 11.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm10.5.5A1.5 1.5 0 0 1 13.5 9h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM6 4.5A1.5 1.5 0 0 1 7.5 3h1A1.5 1.5 0 0 1 10 4.5v1A1.5 1.5 0 0 1 8.5 7h-1A1.5 1.5 0 0 1 6 5.5zM7.5 4a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z">
+                    </path>
+                    <path
+                      d="M6 4.5H1.866a1 1 0 1 0 0 1h2.668A6.517 6.517 0 0 0 1.814 9H2.5c.123 0 .244.015.358.043a5.517 5.517 0 0 1 3.185-3.185A1.503 1.503 0 0 1 6 5.5zm3.957 1.358A1.5 1.5 0 0 0 10 5.5v-1h4.134a1 1 0 1 1 0 1h-2.668a6.517 6.517 0 0 1 2.72 3.5H13.5c-.123 0-.243.015-.358.043a5.517 5.517 0 0 0-3.185-3.185z">
+                    </path>
+                  </svg></div>
+                <h5 class="fw-bold card-title">Yuvaan</h5>
+                <p class="text-muted card-text mb-4">YUVAAN, the annual cultural festival of Indian Institute of
+                  Information Technology Guwahati, from its beginning in 2016 have seen the participation of various
+                  student groups and artists from every corner of the country. Our founding members believed in welfare
+                  of society that's why YUVAAN even being an escape from reality of the world supports a social cause,
+                  working toward a better world. YUVAAN is all about showcasing and nurturing talent.</p><a
+                  class="btn btn-primary shadow" role="button" href="https://www.yuvaaniiitg.org.in/">Visit Yuvaan</a>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-4" data-aos="slide-right" data-aos-duration="750">
+            <div class="card shadow-sm">
+              <div class="card-body px-4 py-5 px-md-5">
+                <div class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon"
+                  style="top: 1rem;right: 1rem;position: absolute;"><svg xmlns="http://www.w3.org/2000/svg" width="1em"
+                    height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-building text-success">
+                    <path
+                      d="M4 2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM4 5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zM7.5 5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zM4.5 8a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z">
+                    </path>
+                    <path
+                      d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1zm11 0H3v14h3v-2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V15h3z">
+                    </path>
+                  </svg></div>
+                <h5 class="fw-bold card-title">IIIT Guwahati</h5>
+                <p class="text-muted card-text mb-4">Indian Institute of Information Technology Guwahati (IIITG) is a
+                  premier institute of higher education located in Guwahati, the capital city of the northeastern Indian
+                  state of Assam. Established in 2013, IIITG is one of the 20 Indian Institutes of Information
+                  Technology (IIITs) established by the Indian Government as institutions of national importance.</p><a
+                  class="btn btn-primary shadow" role="button" href="https://www.iiitg.ac.in">Visit Us</a>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-4" data-aos="slide-left" data-aos-duration="700">
+            <div class="card shadow-sm">
+              <div class="card-body px-4 py-5 px-md-5">
+                <div class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon"
+                  style="top: 1rem;right: 1rem;position: absolute;"><svg xmlns="http://www.w3.org/2000/svg" width="1em"
+                    height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-envelope text-success">
+                    <path
+                      d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z">
+                    </path>
+                  </svg></div>
+                <h5 class="fw-bold card-title">Welcome Letter</h5>
+                <p class="text-start text-muted card-text mb-4">Warm greetings! It is our pleasure to welcome you to the
+                  IIITG Model United Nations 2025. Get ready for enriching discussions, insightful debates, and
+                  collaborative problem-solving. Over the next few days, embrace the spirit of diplomacy and forge
+                  connections with like-minded peers. We are excited to witness your intellectual prowess and passion
+                  for global issues. Best of luck, and let the MUN journey begin!</p>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
-    <div class="container py-4 py-lg-5">
-        <hr>
-        <div class="text-muted d-flex justify-content-between align-items-center pt-3">
-            <p class="mb-0">Copyright © 2025 IIITG MUN</p>
-            <ul class="list-inline mb-0">
-                <li class="list-inline-item"></li>
-                <li class="list-inline-item"></li>
-                <li class="list-inline-item"></li>
-            </ul>
+      </div>
+    </div><!-- End: Features Cards -->
+  </section>
+  <section style="--bs-body-bg: #2d2c38;"><!-- Start: Features Cards -->
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-md-8 col-xl-6 text-center mx-auto" data-aos="fade-right" data-aos-duration="800">
+          <p class="fw-bold text-success mb-2">Offline Committees</p>
+          <h3 class="fw-bold">Embark on your Diplomatic Mission</h3>
         </div>
+      </div>
+      <div class="mx-auto" style="max-width: 900px;">
+        <div class="row row-cols-1 row-cols-md-2 d-flex justify-content-center">
+          <div class="col mb-4" data-aos="slide-right" data-aos-duration="800">
+            <div class="card bg-primary-light">
+              <div class="card-body text-center px-4 py-5 px-md-5">
+                <p class="fw-bold text-primary card-text mb-2">AIPPM</p><img
+                  class="img-fluid border rounded shadow-lg" src="assets/img/Designer-10.jpeg"><a
+                  href="lokSabha.html"><button class="btn btn-primary btn-sm" type="button" style="margin: 5%;">Read
+                    More</button></a>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-4" data-aos="slide-left" data-aos-duration="800">
+            <div class="card bg-secondary-light">
+              <div class="card-body text-center px-4 py-5 px-md-5">
+                <p class="fw-bold text-secondary card-text mb-2">Washington Conference (1942)</p><img
+                  class="img-fluid border rounded shadow-lg" src="assets/img/Designer-13.jpeg"><a
+                  href="unhrc.html"><button class="btn btn-secondary btn-sm" type="button" style="margin: 5%;">Read
+                    More</button></a>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-4" data-aos="slide-up" data-aos-duration="800">
+            <div class="card bg-info-light">
+              <div class="card-body text-center px-4 py-5 px-md-5">
+                <p class="fw-bold text-info card-text mb-2">UNHRC</p><img class="img-fluid border rounded shadow-lg"
+                  src="assets/img/Designer-12.jpeg"><a class="btn btn-info btn-sm" role="button" style="margin: 5%;"
+                  href="unsc.html">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- End: Features Cards --><!-- Start: Features Cards -->
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-md-8 col-xl-6 text-center mx-auto" data-aos="fade-right" data-aos-duration="800">
+          <p class="fw-bold text-success mb-2"><strong>Online Committees</strong></p>
+          <h3 class="fw-bold">Cyber Diplomacy Nexus</h3>
+        </div>
+      </div>
+      <div class="mx-auto" style="max-width: 900px;">
+        <div class="row row-cols-1 row-cols-md-2 d-flex justify-content-center">
+          <div class="col mb-4" data-aos="slide-right" data-aos-duration="800">
+            <div class="card bg-primary-light">
+              <div class="card-body text-center px-4 py-5 px-md-5">
+                <p class="fw-bold text-primary card-text mb-2">Joint Crisis Committee</p><img class="img-fluid border rounded shadow-lg"
+                  src="assets/img/Designer-10.jpeg"><a class="btn btn-primary btn-sm" role="button" style="margin: 5%;"
+                  href="jointcrisis.html">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-4" data-aos="slide-left" data-aos-duration="800">
+            <div class="card bg-secondary-light">
+              <div class="card-body text-center px-4 py-5 px-md-5">
+                <p class="fw-bold text-secondary card-text mb-2">UNGA</p><img class="img-fluid border rounded shadow-lg"
+                  src="assets/img/Designer-13.jpeg"><a class="btn btn-secondary btn-sm" role="button"
+                  style="margin: 5%;" href="unga.html">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- End: Features Cards --><!-- Start: Features Cards -->
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-md-8 col-xl-6 text-center mx-auto" data-aos="fade-left" data-aos-duration="800">
+          <p class="fw-bold text-success mb-2">Leadership &amp; Media</p>
+          <h3 class="fw-bold">The <em>Vision-</em>aries</h3>
+        </div>
+      </div>
+      <div class="mx-auto" style="max-width: 900px;">
+        <div class="row row-cols-1 row-cols-md-2 d-flex justify-content-center">
+          <div class="col mb-4" data-aos="slide-right" data-aos-duration="800">
+            <div class="card bg-primary-light">
+              <div class="card-body text-center px-4 py-5 px-md-5">
+                <p class="fw-bold text-primary card-text mb-2">Executive Board</p><img
+                  class="img-fluid border rounded shadow-lg" src="assets/img/Designer-7.jpeg">
+              </div>
+            </div>
+          </div>
+          <div class="col mb-4" data-aos="slide-left" data-aos-duration="800">
+            <div class="card bg-secondary-light">
+              <div class="card-body text-center px-4 py-5 px-md-5">
+                <p class="fw-bold text-secondary card-text mb-2">International Press</p><img
+                  class="img-fluid border rounded shadow-lg" src="assets/img/Designer-9.jpeg">
+              </div>
+            </div>
+          </div>
+          <div class="col mb-4" data-aos="slide-up" data-aos-duration="800">
+            <div class="card bg-info-light">
+              <div class="card-body text-center px-4 py-5 px-md-5">
+                <p class="fw-bold text-info card-text mb-2">Photojournalist</p><img
+                  class="img-fluid border rounded shadow-lg" src="assets/img/Designer-8.jpeg">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- End: Features Cards -->
+  </section>
+  <section class="py-5"><!-- Start: Team -->
+    <div class="container py-5">
+      <div class="row mb-4 mb-lg-5">
+        <div class="col-md-8 col-xl-6 text-center mx-auto" data-aos="fade-right" data-aos-duration="800">
+          <p class="fw-bold text-success mb-2" style="font-size: 25px;">Secretariat&nbsp;</p>
+          <h2 class="fw-bold">Meet Us</h2>
+        </div>
+      </div>
+      <div class="row row-cols-2 row-cols-md-3 mx-auto" style="max-width: 700px;">
+        <div class="col d-none d-print-grid d-lg-grid d-xl-grid d-xxl-grid mb-4"></div>
+        <div class="col-12 mb-4">
+          <div class="text-center" data-aos="zoom-in-right" data-aos-duration="800"
+            style="box-shadow: 0px 0px 0px 2px var(--bs-body-color);border-top-left-radius: 21px;border-top-right-radius: 21px;border-bottom-right-radius: 21px;border-bottom-left-radius: 21px;background: var(--bs-emphasis-color);">
+            <img class="rounded img-fluid mb-3 fit-cover" width="153" height="182" src="assets/img/team/Ashutosh.png"
+              style="overflow: visible;">
+            <h5 class="fw-bold mb-0">Ashutosh Pandey</h5>
+            <p class="text-muted mb-2">Chief Advisor</p>
+          </div>
+        </div>
+        <div class="col d-none d-print-grid d-lg-grid d-xl-grid d-xxl-grid mb-4"></div>
+        <div class="col-12 mb-4" style="background: rgba(39,38,46,0);">
+          <div class="text-center" data-aos="zoom-in-right" data-aos-duration="800"
+            style="box-shadow: 0px 0px 0px 2px var(--bs-body-color);border-top-left-radius: 21px;border-top-right-radius: 21px;border-bottom-right-radius: 21px;border-bottom-left-radius: 21px;background: #100314;">
+            <img class="rounded img-fluid mb-3 fit-cover" width="103" height="211" src="assets/img/team/%20.png">
+            <h5 class="fw-bold mb-0"><strong>Vamika Chaturvedi</strong></h5>
+            <p class="text-muted mb-2">Secretary General</p>
+          </div>
+        </div>
+        <div class="col-12 d-none d-print-grid d-lg-grid d-xl-grid d-xxl-grid mb-4"
+          style="background: rgba(39,38,46,0);"></div>
+        <div class="col-12 mb-4" style="background: rgba(39,38,46,0);">
+          <div class="text-center" data-aos="zoom-in-left" data-aos-duration="800"
+            style="box-shadow: 0px 0px 0px 2px var(--bs-body-color);border-top-left-radius: 21px;border-top-right-radius: 21px;border-bottom-right-radius: 21px;border-bottom-left-radius: 21px;background: #100314;">
+            <img class="rounded img-fluid mb-3 fit-cover" width="166" height="206"
+              src="assets/img/team/WhatsApp%20Image%202024-01-17%20at%207.07.37%20PM%20Background%20Removed.png">
+            <h5 class="fw-bold mb-0"><strong>Aryan Choudhari</strong></h5>
+            <p class="text-muted mb-2">Director General</p>
+          </div>
+        </div>
+      </div>
+      <div class="row row-cols-2 row-cols-md-3 mx-auto" style="max-width: 700px;">
+        <div class="col-12 mb-4">
+          <div class="text-center" data-aos="zoom-in-right" data-aos-duration="800"
+            style="background: #100314;box-shadow: 0px 0px 0px 2px var(--bs-body-color);border-top-left-radius: 21px;border-top-right-radius: 21px;border-bottom-right-radius: 21px;border-bottom-left-radius: 21px;">
+            <img class="rounded img-fluid mb-3 fit-cover" width="112" height="125"
+              src="assets/img/team/hardik%20Background%20Removed.png">
+            <h5 class="fw-bold mb-0">Hardik Srivastav</h5>
+            <p class="text-muted mb-2">USG Marketing and Publicity Head</p>
+          </div>
+        </div>
+        <div class="col-12 mb-4">
+          <div class="text-center" data-aos="zoom-in-down" data-aos-duration="800"
+            style="background: #100314;box-shadow: 0px 0px 0px 2px var(--bs-body-color);border-top-left-radius: 21px;border-top-right-radius: 21px;border-bottom-right-radius: 21px;border-bottom-left-radius: 21px;">
+            <img class="rounded img-fluid mb-3 fit-cover" width="112" height="149"
+              src="assets/img/team/IMG20210307165728%20Background%20Removed%202.png">
+            <h5 class="fw-bold mb-0">George Rahul</h5>
+            <p class="text-muted mb-2">USG Technical</p>
+          </div>
+        </div>
+        <div class="col-12 mb-4">
+          <div class="text-center" data-aos="zoom-in-right" data-aos-duration="800"
+            style="background: #100314;box-shadow: 0px 0px 0px 2px var(--bs-body-color);border-top-left-radius: 21px;border-top-right-radius: 21px;border-bottom-right-radius: 21px;border-bottom-left-radius: 21px;">
+            <img class="rounded img-fluid mb-3 fit-cover" width="150" height="150"
+              src="assets/img/team/WhatsApp%20Image%202024-02-11%20at%207.37.09%20PM%20Background%20Removed.png">
+            <h5 class="fw-bold mb-0"><strong>Siddharth Singh</strong></h5>
+            <p class="text-muted mb-2">USG Technical</p>
+          </div>
+        </div>
+        <div class="col-12 mb-4">
+          <div class="text-center" data-aos="zoom-in-up"
+            style="background: #100314;box-shadow: 0px 0px 0px 2px var(--bs-body-color);border-top-left-radius: 21px;border-top-right-radius: 21px;border-bottom-right-radius: 21px;border-bottom-left-radius: 21px;">
+            <img class="rounded img-fluid mb-3 fit-cover" width="99" height="149"
+              src="assets/img/team/WhatsApp%20Image%202024-02-06%20at%201.52.04%20PM%20Background%20Removed.png">
+            <h5 class="fw-bold mb-0"><strong>Aditya Raj</strong></h5>
+            <p class="text-muted mb-2">USG Finance</p>
+          </div>
+        </div>
+        <div class="col-12 mb-4">
+          <div class="text-center" data-aos="zoom-in-left"
+            style="background: #100314;box-shadow: 0px 0px 0px 2px var(--bs-body-color);border-top-left-radius: 21px;border-top-right-radius: 21px;border-bottom-right-radius: 21px;border-bottom-left-radius: 21px;">
+            <img class="rounded img-fluid mb-3 fit-cover" width="119" height="150"
+              src="assets/img/team/IMG_20230701_234558%20Background%20Removed.png">
+            <h5 class="fw-bold mb-0"><strong>Vishakha Rathore</strong></h5>
+            <p class="text-muted mb-2">USG Delegate Affairs</p>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="text-center" data-aos="zoom-in"
+            style="background: #100314;box-shadow: 0px 0px 0px 2px var(--bs-body-color);border-top-left-radius: 21px;border-top-right-radius: 21px;border-bottom-right-radius: 21px;border-bottom-left-radius: 21px;">
+            <img class="rounded img-fluid mb-3 fit-cover" width="108" height="151"
+              src="assets/img/team/WhatsApp%20Image%202024-01-17%20at%2010.57.08%20PM%20Background%20Removed.png">
+            <h5 class="fw-bold mb-0">Jaswindar Singh</h5>
+            <p class="text-muted mb-2">USG Hospitality</p>
+          </div>
+        </div>
+      </div>
+      <div class="row row-cols-2 row-cols-md-3 mx-auto" style="max-width: 700px;">
+        <div class="col-12">
+          <div class="text-center" data-aos="zoom-in"
+            style="background: #100314;box-shadow: 0px 0px 0px 2px var(--bs-body-color);border-top-left-radius: 21px;border-top-right-radius: 21px;border-bottom-right-radius: 21px;border-bottom-left-radius: 21px;">
+            <img class="rounded img-fluid mb-3 fit-cover" width="181" height="193"
+              src="assets/img/team/DSCN2198%20Background%20Removed.png">
+            <h5 class="fw-bold mb-0">Snehanshu Pal</h5>
+            <p class="text-muted mb-2">USG Hospitality</p>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="text-center" data-aos="zoom-in"
+            style="background: #100314;box-shadow: 0px 0px 0px 2px var(--bs-body-color);border-top-left-radius: 21px;border-top-right-radius: 21px;border-bottom-right-radius: 21px;border-bottom-left-radius: 21px;">
+            <img class="rounded img-fluid mb-3 fit-cover" width="100" height="170"
+              src="assets/img/team/WhatsApp%20Image%202024-01-17%20at%209.04.57%20PM%20Background%20Removed.png">
+            <h5 class="fw-bold mb-0">Rashi Tiwari</h5>
+            <p class="text-muted mb-2">USG Committee Management</p>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="text-center" data-aos="zoom-in"
+            style="background: #100314;box-shadow: 0px 0px 0px 2px var(--bs-body-color);border-top-left-radius: 21px;border-top-right-radius: 21px;border-bottom-right-radius: 21px;border-bottom-left-radius: 21px;">
+            <img class="rounded img-fluid mb-3 fit-cover" width="135" height="191"
+              src="assets/img/team/WhatsApp%20Image%202024-02-07%20at%2010.16.35%20AM%20Background%20Removed.png">
+            <h5 class="fw-bold mb-0">Arya Sahu</h5>
+            <p class="text-muted mb-2">USG PR</p>
+          </div>
+        </div>
+      </div>
+      <div class="row row-cols-2 row-cols-md-3 mx-auto" style="max-width: 700px;">
+        <div class="col d-none d-print-grid d-lg-grid d-xl-grid d-xxl-grid mb-4"></div>
+        <div class="col-12">
+          <div class="text-center" data-aos="zoom-in"
+            style="background: #100314;box-shadow: 0px 0px 0px 2px var(--bs-body-color);border-top-left-radius: 21px;border-top-right-radius: 21px;border-bottom-right-radius: 21px;border-bottom-left-radius: 21px;">
+            <img class="rounded img-fluid mb-3 fit-cover" width="154" height="207"
+              src="assets/img/team/WhatsApp%20Image%202024-01-18%20at%206.10.41%20PM%20Background%20Removed.png">
+            <h5 class="fw-bold mb-0">Kashish Ahuja</h5>
+            <p class="text-muted mb-2">USG PR</p>
+          </div>
+        </div>
+        <div class="col d-none d-print-grid d-lg-grid d-xl-grid d-xxl-grid mb-4"></div>
+      </div>
+    </div><!-- End: Team -->
+  </section><!-- Start: Contact Details -->
+  <section class="py-5">
+    <div class="container text-start">
+      <div class="row mb-5">
+        <div class="col-md-8 col-xl-6 text-center mx-auto" data-aos="fade-right" data-aos-duration="800">
+          <p class="fw-bold text-success mb-2" style="font-size: 25px;">Contacts</p>
+          <h2 class="fw-bold">How you can reach us</h2>
+        </div>
+      </div>
+      <div class="row d-flex">
+        <div
+          class="col-md-4 col-xl-4 d-flex justify-content-start justify-content-sm-start align-items-sm-start align-items-md-center justify-content-xl-start"
+          data-aos="flip-up" data-aos-duration="700">
+          <div class="d-flex align-items-center justify-content-sm-start p-3">
+            <div
+              class="bs-icon-md bs-icon-circle bs-icon-primary shadow d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon bs-icon-md">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16"
+                class="bi bi-telephone">
+                <path
+                  d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z">
+                </path>
+              </svg></div>
+            <div class="px-2">
+              <h6 class="fw-bold mb-0">Phone</h6>
+              <p class="text-muted mb-0"><h7>Secretary General: </h7>+91 9461817644&nbsp;</p>
+              <p class="text-muted mb-0"><h7>Director General: </h7>+91 9244275526 &nbsp;&nbsp;</p>
+            </div>
+          </div>
+          <div class="d-flex flex-wrap flex-md-column justify-content-md-start align-items-md-start h-100"></div>
+        </div>
+        <div class="col">
+          <div class="d-flex align-items-center p-3" data-aos="flip-up" data-aos-duration="750">
+            <div
+              class="bs-icon-md bs-icon-circle bs-icon-primary shadow d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon bs-icon-md">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16"
+                class="bi bi-envelope">
+                <path
+                  d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z">
+                </path>
+              </svg></div>
+            <div class="px-2">
+              <h6 class="fw-bold mb-0">Email</h6>
+              <p class="text-muted mb-0">vaibhav23b@iiitg.ac.in</p>
+              <p class="text-muted mb-0">harsh.raj23b@iiitg.ac.in</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="d-flex align-items-center p-3" data-aos="flip-up" data-aos-duration="800">
+            <div
+              class="bs-icon-md bs-icon-circle bs-icon-primary shadow d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon bs-icon-md">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16"
+                class="bi bi-pin">
+                <path
+                  d="M4.146.146A.5.5 0 0 1 4.5 0h7a.5.5 0 0 1 .5.5c0 .68-.342 1.174-.646 1.479-.126.125-.25.224-.354.298v4.431l.078.048c.203.127.476.314.751.555C12.36 7.775 13 8.527 13 9.5a.5.5 0 0 1-.5.5h-4v4.5c0 .276-.224 1.5-.5 1.5s-.5-1.224-.5-1.5V10h-4a.5.5 0 0 1-.5-.5c0-.973.64-1.725 1.17-2.189A5.921 5.921 0 0 1 5 6.708V2.277a2.77 2.77 0 0 1-.354-.298C4.342 1.674 4 1.179 4 .5a.5.5 0 0 1 .146-.354zm1.58 1.408-.002-.001.002.001m-.002-.001.002.001A.5.5 0 0 1 6 2v5a.5.5 0 0 1-.276.447h-.002l-.012.007-.054.03a4.922 4.922 0 0 0-.827.58c-.318.278-.585.596-.725.936h7.792c-.14-.34-.407-.658-.725-.936a4.915 4.915 0 0 0-.881-.61l-.012-.006h-.002A.5.5 0 0 1 10 7V2a.5.5 0 0 1 .295-.458 1.775 1.775 0 0 0 .351-.271c.08-.08.155-.17.214-.271H5.14c.06.1.133.191.214.271a1.78 1.78 0 0 0 .37.282">
+                </path>
+              </svg></div>
+            <div class="px-2">
+              <h6 class="fw-bold mb-0">Location</h6>
+              <p class="text-muted mb-0">IIIT Guwahati, Near IT Park,Guwahati,Assam</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/script.min.js"></script>
+  </section><!-- End: Contact Details --><!-- Start: Footer Multi Column -->
+  <footer class="bg-dark">
+    <div class="container py-4 py-lg-5"><!-- Start: Dark footer with social media icons -->
+      <footer class="d-flex justify-content-center align-items-center" id="footerpad"
+        style="--bs-body-color: var(--bs-body-bg);">
+        <div class="container">
+          <div class="row">
+            <div
+              class="col d-flex d-md-flex justify-content-center align-items-center justify-content-md-center align-items-md-center">
+              <a href="#"></a><a href="https://www.instagram.com/iiitg_mun/"><svg class="bi bi-instagram"
+                  xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16"
+                  style="font-size: 59px;">
+                  <path
+                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334">
+                  </path>
+                </svg></a></div>
+            <div
+              class="col d-flex d-md-flex justify-content-center align-items-center justify-content-md-center align-items-md-center">
+              <a href="https://maps.app.goo.gl/6Skz4iLikHAmQWwb7"><svg class="bi bi-map"
+                  xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16"
+                  style="font-size: 56px;">
+                  <path fill-rule="evenodd"
+                    d="M15.817.113A.5.5 0 0 1 16 .5v14a.5.5 0 0 1-.402.49l-5 1a.502.502 0 0 1-.196 0L5.5 15.01l-4.902.98A.5.5 0 0 1 0 15.5v-14a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0L10.5.99l4.902-.98a.5.5 0 0 1 .415.103M10 1.91l-4-.8v12.98l4 .8V1.91zm1 12.98 4-.8V1.11l-4 .8zm-6-.8V1.11l-4 .8v12.98z">
+                  </path>
+                </svg></a></div>
+            <div
+              class="col d-flex d-md-flex justify-content-center align-items-center justify-content-md-center align-items-md-center">
+              <a href="tel:6375176380"><svg
+                  class="bi bi-phone d-md-flex justify-content-md-center align-items-md-center"
+                  xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16"
+                  style="font-size: 59px;">
+                  <path
+                    d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z">
+                  </path>
+                  <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path>
+                </svg></a></div>
+          </div>
+        </div>
+      </footer><!-- End: Dark footer with social media icons -->
+      <hr>
+      <div class="text-muted d-flex justify-content-between align-items-center pt-3">
+        <p class="mb-0">Copyright © 2025 IIITG MUN</p>
+        <ul class="list-inline mb-0">
+          <li class="list-inline-item"></li>
+          <li class="list-inline-item"></li>
+          <li class="list-inline-item"></li>
+        </ul>
+      </div>
+    </div>
+  </footer><!-- End: Footer Multi Column -->
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/script.min.js"></script>
+</div>
 </body>
 
 </html>
